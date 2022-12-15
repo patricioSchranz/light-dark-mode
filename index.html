@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light / Dark Mode</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=javascripttutorial.net">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
+</head>
+<body>
+<!-- COLOR THEME SWITCHER -->
+    <div class="theme-switcher_container">
+
+    <!-- CURRENT THEME INFO  -->
+        <span class="theme-switcher_mode-info-container">
+            <span class="theme-switcher_mode-text">Light Mode</span>
+            <i class="fas fa-sun"></i>
+        </span>
+
+    <!-- THEME CONTROL -->
+        <label class="theme-switcher_control-label">
+            <input type="checkbox">
+            <div class="theme-switcher_slider-round"></div>
+        </label>
+    </div>
+
+
+
+<!-- NAV -->
+    <nav class="nav">
+        <h2 class="hidden">Navigation</h2>
+        <a href="#landing">LANDING</a>
+        <a href="#about">ABOUT</a>
+        <a href="#buttons">BUTTONS</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+
+
+<!-- LANDING -->
+    <!-- hint: a div doesn`t create a a semantic section / the h1 in a div can be used as the h1 of the whole document-->
+    <div id="landing" class="landing">
+        <div class="title-group">
+            <h1>Light / Dark Mode</h1>
+            <h2>Welcome to this Trainings Project</h2>
+        </div>
+    </div>
+
+
+
+<!-- ABOUT -->
+    <section id="about" class="about">
+        <h2>About</h2>
+
+    <!-- Cards -->
+        <div class="about_card-container">
+
+        <!-- Mindfulness -->
+            <div class="about_card">
+                <h3>Mindfulness</h3>
+
+                <img src="undraw_mindfulness_light.svg" alt="Mindfulness" class="about_card_img">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, natus maxime obcaecati consequuntur facilis voluptatibus voluptate vitae ipsa, ipsum sint at tempore voluptates rem quidem excepturi, error accusamus incidunt a.</p>
+            </div>
+
+        <!-- Go for a walk -->
+            <div class="about_card">
+                <h3>Go for a walk</h3>
+
+                <img src="undraw_walking_outside_light.svg" alt="Walking Outside" class="about_card_img">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, natus maxime obcaecati consequuntur facilis voluptatibus voluptate vitae ipsa, ipsum sint at tempore voluptates rem quidem excepturi, error accusamus incidunt a.</p>
+            </div>
+
+        <!-- Programming -->
+            <div class="about_card">
+                <h3>Programming</h3>
+
+                <img src="undraw_programming_light.svg" alt="Programming" class="about_card_img">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, natus maxime obcaecati consequuntur facilis voluptatibus voluptate vitae ipsa, ipsum sint at tempore voluptates rem quidem excepturi, error accusamus incidunt a.</p>
+            </div>
+
+        </div><!-- Cards End -->
+    </section>
+
+
+
+<!-- Buttons -->
+    <section class="buttons" id="buttons">
+        <h2>Buttons</h2>
+
+    <!-- the Buttons -->
+        <div class="buttons">
+            <button class="primary">Primary</button>
+            <button class="secondary">Secondary</button>
+            <button class="primary" disabled>Disabled</button>
+            <button class="outline">Outline</button>
+            <button class="secondary outline">Alt Outline</button>
+            <button class="outline" disabled>Disabled</button>
+        </div>
+
+    <!-- Text Box-->
+        <div class="text-box">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, non. Voluptates nesciunt mollitia nam. Necessitatibus sed placeat, eligendi veritatis in iusto dicta! Odit, vel alias ut quos consectetur nemo neque.
+        </div>
+    </section>
+
+
+
+<!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+
+    <!-- Icons -->
+        <div class="social-icons">
+            <i class="fab fa-github"></i>
+            <i class="fab fa-codepen"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-medium"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

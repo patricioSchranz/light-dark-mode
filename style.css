@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Kaushan+Script|Oswald&display=swap');
+
+/* ----------------------------------------
+Resets / Defaults / Common 
+-------------------------------------------- */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--on-background);
+    background-color: var(--background);
+    font-family: Comfortaa, sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+h1,
+h2{
+    width: 100%;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+h1{
+    font-family: Kaushan Script, sans-serif;
+}
+
+h2{
+    margin-bottom: 2rem;
+    color: var(--on-background-alt);
+}
+
+/* ---------------------------------------
+Special Elements 
+------------------------------------------*/
+
+
+
+/* -------------------------------------------------
+Project
+---------------------------------------------------- */
+
+
+/* --- Color Mode Selection --- */
+
+.theme-switcher_container{
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    /* width: 20rem; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.theme-switcher_mode-info-container{
+    display: flex;
+    align-items: center;
+    color: var(--on-background);
+}
+
+.fas{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+}
+
+.theme-switcher_control-label{
+    /* background-color: #fff; */
+    width: 4rem;
+    height: 2rem;
+    position: relative;
+    border-radius: 3rem;
+}
+
+.theme-switcher_slider-round{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--secondary-color);
+    border-radius: 3rem;
+}
+
+.theme-switcher_slider-round::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3rem;
+    transition: left .3s;
+}
+
+input{
+    display: none;
+}
+
+/* input:checked +  .theme-switcher_slider-round{
+    background: var(--primary-color);
+} */
+
+input:checked + .theme-switcher_slider-round::before{
+    left: 50%;
+}
+
+
+/* --- Nav --- */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Oswald, sans-serif;
+}
+
+a {
+    margin-right: 25px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+  }
+  
+  a:hover,
+  a:focus {
+    color: var(--on-background);
+    border-bottom: 3px solid;
+  }
+
+/* --- Main Content --- */
+
+section,
+.landing{
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* About */
+.about_card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+.about_card{
+    flex-shrink: 1;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(255 255 255 / 65%);
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.about_card img{
+    width: 80%;
+    margin: 1.5rem 0;
+}
+
+
+/* Buttons */
+.buttons {
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+  
+  button {
+    min-width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--primary-color);
+    font-size: 15px;
+    outline: none;
+  }
+  
+  button:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  
+  button:hover:not(.outline) {
+    filter: brightness(110%);
+  }
+  
+  .primary {
+    background: var(--primary-color);
+    color: var(--on-primary);
+  }
+  
+  .secondary {
+    border: 2px solid var(--secondary-color);
+  }
+  
+  .secondary,
+  .secondary:hover,
+  .outline.secondary:hover {
+    background: var(--secondary-color);
+    color: var(--on-primary);
+  }
+  
+  .outline {
+    background: var(--background);
+    color: var(--on-background);
+  }
+  
+  .outline:hover {
+    background: var(--primary-color);
+    color: var(--on-primary);
+  }
+  
+  .text-box {
+    width: 40%;
+    text-align: justify;
+    background: rgb(0 0 0 / 50%);
+    color: var(--on-primary);
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  p {
+    margin: 0;
+    line-height: 25px;
+  }
+
+
+/* Contact Section */
+.fab {
+    font-size: 100px;
+    margin-right: 50px;
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+  
+  .fab:hover {
+    color: var(--on-background);
+  }
