@@ -22,24 +22,19 @@ const currentTheme = localStorage.getItem('theme')
 // => change the src of the card images
 const changeCardImages = (currentMode, activatedMode)=>{
     cardImages.forEach(cardImage =>{
-        // console.log('card image src', cardImage.src)
-        console.log('current mode', currentMode)
 
         // note: if you want to pass a variable in a regular expression, you must use the regular expression constructor 
         //       -> the literal method (/ /g) don`t understand variables as variables
-        const pattern = new RegExp(currentMode, 'g')
-        console.log('pattern', pattern)
 
+        const pattern = new RegExp(currentMode, 'g')
         const newSrc = cardImage.src.replace(pattern, activatedMode)
         cardImage.src = newSrc
-        
-        // console.log(newSrc)
+ 
     })
 }
 
 // => toggle the color theme
 const toggleColorTheme = (color)=>{
-    // console.log('children of the theme info'currentThemeInfo.children)
     
     color === 'light'
     ? textBox.style.background = 'rgb(0 0 0 / 50%)'
@@ -62,7 +57,6 @@ const toggleColorTheme = (color)=>{
 
 // => switch the color theme
 const switchTheme = (event)=>{
-    console.log(event.target.checked)
 
     // => when the checkbox is checked, dark mode is activated
     if(event.target.checked){
